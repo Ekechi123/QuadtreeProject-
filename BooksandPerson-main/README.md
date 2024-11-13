@@ -1,17 +1,19 @@
-# BooksandPerson
-Programming Language Homework 3
+## Programming Language Homework 3 ##
 
-# Library Management System
+This project implements a basic library management system using object-oriented principles in Java. It includes functionality for managing books and people, including library members and staff.
 
-This project implements a simple library management system using object-oriented design principles in Java. It includes functionality to add and manage books and people (members and staff) in a library.
+Classes:
 
-## Classes
+Book: An abstract base class representing general book attributes, with two subclasses:
 
-1. **Book**: Abstract base class with two derived classes:
-   - `Fiction`: Represents a fictional book.
-   - `NonFiction`: Represents a non-fictional book.
-2. **Person**: Abstract base class with two derived classes:
-   - `Member`: Represents a library member.
-   - `Staff`: Represents a library staff member with methods to register members and books.
-3. **Library**: Manages collections of books, members, and staff.
+Fiction: Represents fictional books.
 
+NonFiction: Represents non-fiction books.
+
+Person: An abstract base class for people in the library, with two subclasses:
+
+Member: Represents a library member who can borrow books.
+
+Staff: Represents library staff, with added responsibilities like registering books and members.
+
+Library: A class that manages the collection of books, members, and staff, facilitating the operations of the library system.
