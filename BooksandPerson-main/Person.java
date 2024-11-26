@@ -1,12 +1,14 @@
-public abstract class Person {
+public class Person {
     private String name;
     private String id;
 
+    // Constructor
     public Person(String name, String id) {
         this.name = name;
         this.id = id;
     }
 
+    // Getter methods for name and id
     public String getName() {
         return name;
     }
@@ -15,10 +17,8 @@ public abstract class Person {
         return id;
     }
 
-    public abstract String describe();
-
-    @Override
-    public String toString() {
-        return String.format("%s (ID: %s)", name, id);
+    // Method to describe the person, now using the id
+    public String describe() {
+        return "Person: " + name + " (ID: " + id + ")";
     }
 }
