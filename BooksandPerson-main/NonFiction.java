@@ -1,10 +1,10 @@
 public class NonFiction extends Book {
-    public NonFiction(String title, String author, String ISBN) {
-        super(title, author, ISBN);
+    public NonFiction(String title, String author, String isbn) {
+        super(title, author, isbn);
     }
 
     @Override
-    public String describe() {
-        return "Non-Fiction: " + title + " by " + author;
+    public String getDetails() {
+        return "Non-Fiction Book: " + super.toString();
     }
 }
