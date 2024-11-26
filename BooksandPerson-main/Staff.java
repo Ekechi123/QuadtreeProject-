@@ -5,14 +5,14 @@ public class Staff extends Person {
 
     @Override
     public String describe() {
-        return "Library Staff: " + name;
-    }
-
-    public void registerMember(Library library, Member member) {
-        library.registerMember(member);
+        return "Staff Member: " + getName();
     }
 
     public void registerBook(Library library, Book book) {
         library.addBook(book);
+    }
+
+    public void registerMember(Library library, Person member) {
+        library.registerMember(member);
     }
 }
