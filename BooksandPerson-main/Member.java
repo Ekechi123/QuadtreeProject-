@@ -5,6 +5,6 @@ public class Member extends Person {
 
     @Override
     public String describe() {
-        return "Library Member: " + name;
+        return "Library Member: " + getName();
     }
 }
