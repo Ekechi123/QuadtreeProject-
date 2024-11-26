@@ -1,10 +1,10 @@
 public class Fiction extends Book {
-    public Fiction(String title, String author, String ISBN) {
-        super(title, author, ISBN);
+    public Fiction(String title, String author, String isbn) {
+        super(title, author, isbn);
     }
 
     @Override
-    public String describe() {
-        return "Fiction: " + title + " by " + author;
+    public String getDetails() {
+        return "Fiction Book: " + super.toString();
     }
 }
