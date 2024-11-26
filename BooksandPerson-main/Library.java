@@ -2,40 +2,34 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Library {
-    private List<Book> books = new ArrayList<>();
-    private List<Member> members = new ArrayList<>();
-    private List<Staff> staff = new ArrayList<>();
+    private List<Book> bookCollection = new ArrayList<>();
+    private List<Person> members = new ArrayList<>();
+    private List<Staff> staffMembers = new ArrayList<>();
 
     public void addBook(Book book) {
-        books.add(book);
+        bookCollection.add(book);
     }
 
-    public void registerMember(Member member) {
+    public void registerMember(Person member) {
         members.add(member);
     }
 
-    public void addStaff(Staff staffMember) {
-        staff.add(staffMember);
+    public void hireStaff(Staff staff) {
+        staffMembers.add(staff);
     }
 
-    public void listBooks() {
-        System.out.println("Library Books:");
-        for (Book book : books) {
-            System.out.println(book.describe());
-        }
+    public void listAllBooks() {
+        System.out.println("Books in the Library:");
+        bookCollection.forEach(book -> System.out.println(book.getDetails()));
     }
 
     public void listMembers() {
-        System.out.println("Library Members:");
-        for (Member member : members) {
-            System.out.println(member.describe());
-        }
+        System.out.println("Registered Members:");
+        members.forEach(member -> System.out.println(member.describe()));
     }
 
     public void listStaff() {
         System.out.println("Library Staff:");
-        for (Staff staffMember : staff) {
-            System.out.println(staffMember.describe());
-        }
+        staffMembers.forEach(staff -> System.out.println(staff.describe()));
     }
 }
