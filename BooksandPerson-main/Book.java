@@ -1,32 +1,32 @@
 public abstract class Book {
-    protected String title;
-    protected String author;
-    protected String ISBN;
-    protected boolean isCheckedOut;
+    private String title;
+    private String author;
+    private String isbn;
+    private boolean checkedOut;
 
-    public Book(String title, String author, String ISBN) {
+    public Book(String title, String author, String isbn) {
         this.title = title;
         this.author = author;
-        this.ISBN = ISBN;
-        this.isCheckedOut = false;
+        this.isbn = isbn;
+        this.checkedOut = false;
     }
 
     public void checkOut() {
-        isCheckedOut = true;
+        this.checkedOut = true;
     }
 
     public void returnBook() {
-        isCheckedOut = false;
+        this.checkedOut = false;
     }
-
-    public abstract String describe();
 
     public boolean isCheckedOut() {
-        return isCheckedOut;
+        return this.checkedOut;
     }
+
+    public abstract String getDetails();
 
     @Override
     public String toString() {
-        return title + " by " + author + " (ISBN: " + ISBN + ")";
+        return String.format("%s by %s (ISBN: %s)", title, author, isbn);
     }
 }
