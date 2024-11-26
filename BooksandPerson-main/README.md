@@ -1,19 +1,30 @@
-## Programming Language Homework 3 ##
+# Programming Language Homework 3
 
 This project implements a basic library management system using object-oriented principles in Java. It includes functionality for managing books and people, including library members and staff.
 
-Classes:
+## Classes:
 
-Book: An abstract base class representing general book attributes, with two subclasses:
+- **Book**: An abstract base class representing general book attributes, with two subclasses:
+  - **Fiction**: Represents fictional books.
+  - **NonFiction**: Represents non-fiction books.
 
-Fiction: Represents fictional books.
+- **Person**: An abstract base class for people in the library, with two subclasses:
+  - **Member**: Represents a library member who can borrow books.
+  - **Staff**: Represents library staff, with added responsibilities like registering books and members.
 
-NonFiction: Represents non-fiction books.
+- **Library**: A class that manages the collection of books, members, and staff, facilitating the operations of the library system.
 
-Person: An abstract base class for people in the library, with two subclasses:
+## How to Run:
 
-Member: Represents a library member who can borrow books.
+1. Clone the repository to your local machine:
+   ```bash
+   git clone https://github.com/Ekechi123/BooksandPerson-main.git
 
-Staff: Represents library staff, with added responsibilities like registering books and members.
+2. Navigate to the project directory:
+cd BooksandPerson-main
 
-Library: A class that manages the collection of books, members, and staff, facilitating the operations of the library system.
+3. Compile the Java files:
+javac *.java
+
+4. Run the Main class:
+java Main
